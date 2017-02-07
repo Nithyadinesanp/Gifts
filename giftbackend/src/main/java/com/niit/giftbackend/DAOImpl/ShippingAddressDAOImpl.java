@@ -12,7 +12,7 @@ import com.niit.giftbackend.model.ShippingAddress;
 @Repository
 @EnableTransactionManagement
 @Transactional
-public class ShippingAddressDAOImpl implements ShippingAddressDao {
+public class ShippingAddressDaoImpl implements ShippingAddressDao {
 
 	@Autowired
 	SessionFactory sessionFactory;

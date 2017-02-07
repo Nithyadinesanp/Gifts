@@ -1,9 +1,11 @@
 package com.niit.giftbackend.dao;
 
+import java.util.List;
+
 import com.niit.giftbackend.model.Cart;
 import com.niit.giftbackend.model.Item;
 
-public interface ItemDAO {
+public interface ItemDao {
 
 	void add(Item item);
 	
@@ -12,4 +14,5 @@ public interface ItemDAO {
 	void removeAll(Cart cart);
 	
 	Item getItemById(int itemId);
+	List<Item> getCartItems(int cartid);
 }

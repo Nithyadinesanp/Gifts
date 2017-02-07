@@ -6,13 +6,13 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.giftbackend.dao.CartDAO;
+import com.niit.giftbackend.dao.CartDao;
 import com.niit.giftbackend.model.Cart;
 
 @Repository("cartDao")
 @EnableTransactionManagement
 @Transactional
-public class CartDAOImpl implements CartDAO {
+public class CartDaoImpl implements CartDao {
 
 	@Autowired
 	SessionFactory sessionFactory;

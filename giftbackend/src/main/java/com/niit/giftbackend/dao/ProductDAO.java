@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.niit.giftbackend.model.Product;
 
-public interface ProductDAO {
+public interface ProductDao {
 
 	void add(Product product);
 

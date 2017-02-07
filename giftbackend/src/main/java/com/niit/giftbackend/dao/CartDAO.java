@@ -2,7 +2,7 @@ package com.niit.giftbackend.dao;
 
 import com.niit.giftbackend.model.Cart;
 
-public interface CartDAO {
+public interface CartDao {
 
 	void add(Cart cart);
 	

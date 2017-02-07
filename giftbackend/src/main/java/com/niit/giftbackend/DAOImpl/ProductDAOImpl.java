@@ -8,13 +8,13 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.giftbackend.dao.ProductDAO;
+import com.niit.giftbackend.dao.ProductDao;
 import com.niit.giftbackend.model.Product;
 
 @Repository
 @EnableTransactionManagement
 @Transactional
-public class ProductDAOImpl implements ProductDAO {
+public class ProductDaoImpl implements ProductDao {
 
 	@Autowired
 	SessionFactory sessionFactory;

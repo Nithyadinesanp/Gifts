@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.niit.giftbackend.model.User;
 
-public interface UserDAO {
+public interface UserDao {
 
 	void add(User user);
 	

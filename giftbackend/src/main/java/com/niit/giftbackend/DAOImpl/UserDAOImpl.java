@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.giftbackend.dao.UserDAO;
+import com.niit.giftbackend.dao.UserDao;
 import com.niit.giftbackend.model.ShippingAddress;
 import com.niit.giftbackend.model.Cart;
 import com.niit.giftbackend.model.User;
@@ -16,7 +16,7 @@ import com.niit.giftbackend.model.User;
 @Repository
 @Transactional
 @EnableTransactionManagement
-public class UserDAOImpl implements UserDAO {
+public class UserDaoImpl implements UserDao {
 
 	@Autowired
 	SessionFactory sessionFactory;

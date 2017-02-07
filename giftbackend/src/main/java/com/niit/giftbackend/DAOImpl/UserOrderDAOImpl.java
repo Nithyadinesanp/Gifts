@@ -12,7 +12,7 @@ import com.niit.giftbackend.model.UserOrder;
 @Repository("userOrderDao")
 @Transactional
 @EnableTransactionManagement
-public class UserOrderDAOImpl implements UserOrderDao {
+public class UserOrderDaoImpl implements UserOrderDao {
 
 	@Autowired
 	SessionFactory sessionFactory;
