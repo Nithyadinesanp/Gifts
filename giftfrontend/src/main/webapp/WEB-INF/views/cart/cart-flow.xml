@@ -4,9 +4,9 @@
 http://www.springframework.org/schema/webflow/spring-webflow.xsd">
 
 
-	<var name="shippingAddress" class="com.niit.backend1.model.ShippingAddress" />
-	<var name="order" class="com.niit.backend1.model.UserOrder" />
-	<var name="itemlist" class="com.niit.backend1.model.Item" />
+	<var name="shippingAddress" class="com.niit.giftbackend.model.ShippingAddress" />
+	<var name="order" class="com.niit.giftbackend.model.UserOrder" />
+	<var name="itemlist" class="com.niit.giftbackend.model.Item" />
 
 	<action-state id="orderProcess">
 		<evaluate expression="userOrderDao.getUserOrderById(requestParameters.orderid)"	result="order"></evaluate>
@@ -19,7 +19,7 @@ http://www.springframework.org/schema/webflow/spring-webflow.xsd">
 	</view-state>
 
 	<action-state id="shippingAddressMethod">
-		<evaluate expression="shippingAddressDao.add(order.user)"></evaluate>
+		<evaluate expression="ShippingAddressDao.addAddress(order.user.shippingAddress)"></evaluate>
 		<transition on="success" to="checkoutconfirmationMethod"></transition>
 	</action-state>
 

@@ -129,6 +129,18 @@ body
     margin: 0 0 11px;
 }
 
+.form-signup {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signup .form-control {
+	position: relative;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+}
+
     </style>
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -164,11 +176,11 @@ body
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
- <li class="active"><a href="<c:url value="/"/>"> Home</a></li>
-        <li class="active"><a href="<c:url value="/images"/>">Images</a></li>
-        <li><a href="<c:url value="/aboutus"/>">About us</a></li>
-<li><a href="<c:url value="/contactus"/>">Contact</a></li>
-<!-- <li><a href="products">Product</a></li> -->
+ <li class="active"><a href=" ">Home</a></li>
+        <li class="active"><a href="images">Images</a></li>
+        <li><a href="aboutus">About us</a></li>
+<li><a href="contact">Contact</a></li>
+<!-- <li><a href="products">Prodect</a></li> -->
 <li class="dropdown"><a data-toggle="" class="dropdown-toggle"
 						href="<c:url value="/products"/>"><b>Prodect</b><b class="caret"></b></a></li>
 					<sec:authorize access="hasRole('ADMIN')">
@@ -190,13 +202,76 @@ body
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<c:url value="/register"/>">Register</a></li>
-<li><a href="<c:url value="/login"/>">Login</a></li>
+        <li><a href="register">Register</a></li>
+<li><a href="login">Login</a></li>
           </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+
+	<form:form class="form-signup" commandName="order">
+		<h2 style="color: #1E7145">ShippingAddress</h2>
+		<form:input type="text" id="user.shippingAddress.line1" path="user.shippingAddress.line1" 
+		class="form-control" placeholder="Address Line 1"/>
+		<br>
+		
+		<form:input type="text" id="user.shippingAddress.line2" path="user.shippingAddress.line2"
+		 class="form-control" placeholder="Address Line 2"/>
+		<br>
+		
+		<form:input type="text" id="user.shippingAddress.city" path="user.shippingAddress.city" 
+		class="form-control" placeholder="City"/>
+		<br>
+		
+	    <form:input type="text" id="user.shippingAddress.state" path="user.shippingAddress.state" 
+	    class="form-control" placeholder="State"/>
+		<br>
+		
+		<form:input type="text" id="user.shippingAddress.zipCode" path="user.shippingAddress.zipCode" 
+		class="form-control" placeholder="Postal Code"/>
+		<br>
+		
+		<br>
+		<form:input type="text" id="user.shippingAddress.mobile" path="user.shippingAddress.mobile" 
+		class="form-control" placeholder="Mobile No."/>
+		<br>
+		
+		<input name="_eventId_event1"
+		class="btn btn-lg btn-default btn-block button" type="submit"
+		value="Confirm">
+
+		</form:form> 
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<%@ include file="footer.jsp"%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
